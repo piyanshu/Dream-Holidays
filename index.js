@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-    res.send('Hello');
+    res.render('index', {name: 'hey'});
 });
 app.listen(port, function(req, res){
     console.log('Server is up and running on port:', port);
