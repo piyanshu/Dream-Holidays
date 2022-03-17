@@ -8,6 +8,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
+const user = require('./models/user');
+
 app.get('/', function(req, res){
     res.render('index', {name: 'hey'});
 });
