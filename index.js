@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
+const db = require('./config/mongoose');
 const user = require('./models/user');
 
 app.get('/', function(req, res){
