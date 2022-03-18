@@ -12,8 +12,14 @@ const db = require('./config/mongoose');
 const user = require('./models/user');
 
 app.get('/', function(req, res){
-    res.render('index', {name: 'hey'});
+    res.redirect('/login');
 });
+app.get('/login', function(req, res){
+    return res.render('login');
+});
+app.get('/register', function(req, res){
+    return res.render('register');
+})
 app.listen(port, function(req, res){
     console.log('Server is up and running on port:', port);
 });
